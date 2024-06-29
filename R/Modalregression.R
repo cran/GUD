@@ -14,6 +14,8 @@
 #' More details of the Bayesian modal regression model can be found at at Liu, Huang, and Bai (2022) <https://arxiv.org/pdf/2211.10776>.
 #'
 #' @example /inst/examples/Modalregression_example.R
+#' @references
+#' \insertRef{liu2022bayesian}{GUD}
 modal_regression <- function(formula, data, model,...) {
   if (! inherits(formula, "formula")) {
     stop("The first argument must be a formula.")

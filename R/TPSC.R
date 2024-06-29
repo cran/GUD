@@ -7,13 +7,14 @@
 #' @param delta the degree of freedom.
 #' @name dTPSC
 #' @details
-#' The TPSC-Student-t distribution has density
+#' The TPSC-Student-t distribution has the density
 #' \deqn{f_{\mathrm{TPSC}}(y \mid w, \theta, \sigma, \delta)=w f_{\mathrm{LT}}\left(y \mid \theta, \sigma \sqrt{\frac{w}{1-w}}, \delta\right)+(1-w) f_{\mathrm{RT}}\left(y \mid \theta, \sigma \sqrt{\frac{1-w}{w}}, \delta\right),}
 #' where \deqn{f_{\mathrm{LT}}(y \mid \theta, \sigma, \delta)=\frac{2}{\sigma} f\left(\left.\frac{y-\theta}{\sigma} \right\rvert\, \delta\right) \mathbb{I}(y<\theta),} and \deqn{f_{\mathrm{RT}}(y \mid \theta, \sigma, \delta)=\frac{2}{\sigma} f\left(\left.\frac{y-\theta}{\sigma} \right\rvert\, \delta\right) \mathbb{I}(y \geq \theta).}
+#' Additionally, \eqn{f(y \mid \delta)} represents the density function of the standardized Student-t distribution with the degree of freedom \eqn{\delta}.
 #'
 #' @return `dTPSC` gives the density. `rTPSC` generates random deviates.
 #' @references
-#' See also <https://arxiv.org/pdf/2211.10776>.
+#' \insertRef{liu2022bayesian}{GUD}
 #' @example /inst/examples/TPSC_example.R
 NULL
 #> NULL

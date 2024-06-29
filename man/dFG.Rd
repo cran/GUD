@@ -29,11 +29,11 @@ rFG(n, w, loc, sigma1, sigma2)
 The Flexible Gumbel Distribution
 }
 \details{
-The Gumbel distribution has density
+The Gumbel distribution has the density
 \deqn{f_{\text {Gumbel }}(y \mid \theta, \sigma)=\frac{1}{\sigma} \exp \left\{-\frac{y-\theta}{\sigma}-\exp \left(-\frac{y-\theta}{\sigma}\right)\right\},}
 where \eqn{\theta \in \mathbb{R}} is the mode as the location parameter, \eqn{\sigma > 0} is the scale parameter.
 
-The flexible Gumbel distribution has density
+The flexible Gumbel distribution has the density
 \deqn{f_{\mathrm{FG}}\left(y \mid w, \theta, \sigma_1, \sigma_2\right)=w f_{\text {Gumbel }}\left(-y \mid-\theta, \sigma_1\right)+(1-w) f_{\text {Gumbel }}\left(y \mid \theta, \sigma_2\right) .}
 where \eqn{w \in [0,1]} is the weight parameter, \eqn{\sigma_{1} > 0} is the scale parameter of the left skewed part and \eqn{\sigma_{2} > 0} is the scale parameter of the right skewed part.
 }
@@ -57,5 +57,5 @@ points(x = seq(-10,20,length.out = 1000),
        lty = 2)
 }
 \references{
-See also \url{https://arxiv.org/pdf/2211.10776}.
+\insertRef{liu2022bayesian}{GUD}
 }

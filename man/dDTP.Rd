@@ -31,9 +31,13 @@ rDTP(n, theta, sigma1, sigma2, delta1, delta2)
 The DTP-Student-t Distribution
 }
 \details{
-The DTP-Student-t distribution has density
+The DTP-Student-t distribution has the density
 \deqn{f_{\mathrm{DTP}}\left(y \mid \theta, \sigma_1, \sigma_2, \delta_1, \delta_2\right)=w f_{\mathrm{LT}}\left(y \mid \theta, \sigma_1, \delta_1\right)+(1-w) f_{\mathrm{RT}}\left(y \mid \theta, \sigma_2, \delta_2\right),}
-where \deqn{w=\frac{\sigma_1 f\left(0 \mid \delta_2\right)}{\sigma_1 f\left(0 \mid \delta_2\right)+\sigma_2 f\left(0 \mid \delta_1\right)},} \eqn{f(0 \mid \delta)} represents \deqn{f((y-\theta) / \sigma \mid \delta)\text{ evaluated at } y=\theta,} \deqn{f_{\mathrm{LT}}(y \mid \theta, \sigma, \delta)=\frac{2}{\sigma} f\left(\left.\frac{y-\theta}{\sigma} \right\rvert\, \delta\right) \mathbb{I}(y<\theta),} and \deqn{f_{\mathrm{RT}}(y \mid \theta, \sigma, \delta)=\frac{2}{\sigma} f\left(\left.\frac{y-\theta}{\sigma} \right\rvert\, \delta\right) \mathbb{I}(y \geq \theta).}
+where \deqn{w=\frac{\sigma_1 f\left(0 \mid \delta_2\right)}{\sigma_1 f\left(0 \mid \delta_2\right)+\sigma_2 f\left(0 \mid \delta_1\right)},}
+\eqn{f(0 \mid \delta)} represents \deqn{f((y-\theta) / \sigma \mid \delta)\text{ evaluated at } y=\theta,}
+\deqn{f_{\mathrm{LT}}(y \mid \theta, \sigma, \delta)=\frac{2}{\sigma} f\left(\left.\frac{y-\theta}{\sigma} \right\rvert\, \delta\right) \mathbb{I}(y<\theta),} and
+\deqn{f_{\mathrm{RT}}(y \mid \theta, \sigma, \delta)=\frac{2}{\sigma} f\left(\left.\frac{y-\theta}{\sigma} \right\rvert\, \delta\right) \mathbb{I}(y \geq \theta).}
+Additionally, \eqn{f(y \mid \delta)} represents the density function of the standardized Student-t distribution with the degree of freedom \eqn{\delta}.
 }
 \examples{
 set.seed(100)
@@ -55,5 +59,5 @@ points(x = seq(-100,40,length.out = 1000),
        lty = 2)
 }
 \references{
-See also \url{https://arxiv.org/pdf/2211.10776}.
+\insertRef{liu2022bayesian}{GUD}
 }

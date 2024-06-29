@@ -7,13 +7,13 @@
 "_PACKAGE"
 #' @useDynLib GUD, .registration = TRUE
 #' @import methods
-#' @import MASS
 #' @import Rcpp
 #' @importFrom rstan sampling
 #' @importFrom rstantools rstan_config
 #' @importFrom RcppParallel RcppParallelLibs
 #' @importFrom stats model.matrix rbinom rgamma rnorm runif
+#' @importFrom Rdpack reprompt
 #' @references
 #' Stan Development Team (NA). RStan: the R interface to Stan. R package version 2.32.3. https://mc-stan.org
-#' See also <https://arxiv.org/pdf/2211.10776>.
+#' \insertRef{liu2022bayesian}{GUD}
 NULL

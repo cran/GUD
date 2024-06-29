@@ -1,3 +1,14 @@
+# GUD 1.00
+
+- Improve the documentation of `DTP` and `TPSC` distributions.
+- Change the URL from the arXiv link to the GitHub link.
+- Add `Suggests` in `DESCRIPTION`.
+- Add a vignette.
+- Add 2023 United States Crime Data.
+- Update the references.
+- Update license.
+- Update the DOI of "Bayesian Modal Regression Based on Mixture Distributions".
+
 # GUD 0.05
 
 - Edit the example of the `modal_regression` function: 
