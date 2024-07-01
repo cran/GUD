@@ -20,7 +20,6 @@ if (require(lattice)) {
 }
 
 ## -----------------------------------------------------------------------------
-df1 <- as.data.frame(df1)
 TPSC_model <- modal_regression(`murder rate` ~ college + poverty + metropolitan, 
                                data = df1, 
                                model = "TPSC",

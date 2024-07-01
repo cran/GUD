@@ -11,7 +11,7 @@
 #' \deqn{Y_{i} = \mathbf{X}_{i} \boldsymbol{\beta} + e_{i},}
 #' where \eqn{e_{i}} follows the FG, DTP or TPSC distribution.
 #'
-#' More details of the Bayesian modal regression model can be found at at Liu, Huang, and Bai (2022) <https://arxiv.org/pdf/2211.10776>.
+#' More details of the Bayesian modal regression model can be found at at Liu, Huang, and Bai (2024) <https://arxiv.org/pdf/2211.10776>.
 #'
 #' @example /inst/examples/Modalregression_example.R
 #' @references
@@ -21,6 +21,8 @@ modal_regression <- function(formula, data, model,...) {
     stop("The first argument must be a formula.")
   }
   match.arg(model,c("FG","DTP","TPSC"))
+  # ensure data is a dataframe
+  data <- as.data.frame(data)
   X <- model.matrix(object = formula, data = data)
   coltxt <- colnames(X)
   N <- nrow(X)
